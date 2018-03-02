@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5BDDD03-0AD8-4136-A835-EEF312626C9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmobilerSamples</RootNamespace>
+    <AssemblyName>SmobilerSamples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Smobiler.Core">
+      <HintPath>..\..\..\..\Code\Dll\Smobiler.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Smobiler.Core.Controls">
+      <HintPath>..\..\..\..\Code\Dll\Smobiler.Core.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Smobiler.Design">
+      <HintPath>..\..\..\..\Code\Dll\Smobiler.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Smobiler.Utility">
+      <HintPath>..\..\..\..\Code\Dll\Smobiler.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FilterView\userFilter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilterView\userFilter.Designer.cs">
+      <DependentUpon>userFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterView\userFilterItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilterView\userFilterItem.Designer.cs">
+      <DependentUpon>userFilterItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterView\userFilterItemTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilterView\userFilterItemTemplate.Designer.cs">
+      <DependentUpon>userFilterItemTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListView\demoListViewRefresh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListView\demoListViewRefresh.Designer.cs">
+      <DependentUpon>demoListViewRefresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowDialog\userFooterDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShowDialog\userFooterDialog.Designer.cs">
+      <DependentUpon>userFooterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmobilerForm1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmobilerForm1.Designer.cs">
+      <DependentUpon>SmobilerForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FilterView\userFilter.resx">
+      <DependentUpon>userFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterView\userFilterItem.resx">
+      <DependentUpon>userFilterItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterView\userFilterItemTemplate.resx">
+      <DependentUpon>userFilterItemTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListView\demoListViewRefresh.resx">
+      <DependentUpon>demoListViewRefresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDialog\userFooterDialog.resx">
+      <DependentUpon>userFooterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmobilerForm1.resx">
+      <DependentUpon>SmobilerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Smobiler_128.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
