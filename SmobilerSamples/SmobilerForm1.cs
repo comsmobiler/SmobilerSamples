@@ -11,10 +11,13 @@ namespace SmobilerSamples
     {
         private void SmobilerForm1_Load(object sender, EventArgs e)
         {
-            ListMenuViewGroup grp1=new ListMenuViewGroup();
+            ListMenuViewGroup grp1 = new ListMenuViewGroup();
             grp1.Items.Add(new ListMenuViewItem("logon", "ListView服务端刷新", "", "") { Tag = "demoListViewRefresh" });
             grp1.Items.Add(new ListMenuViewItem("logon", "数据选择", "", "") { Tag = "userFilter" });
             grp1.Items.Add(new ListMenuViewItem("logon", "底部弹出输入Dialog", "", "") { Tag = "userFooterDialog" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "弹出密码输入框", "", "") { Tag = "userDialogPassword" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "ShowDialig后获取数据", "", "") { Tag = "demogetdata" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "WebView加载各种资源", "", "") { Tag = "demoWebView" });
             this.listMenuView1.Groups.Add(grp1);
         }
 
@@ -26,42 +29,52 @@ namespace SmobilerSamples
 
         private void listMenuView1_ItemPress(object sender, ListMenuViewItemPressEventArgs e)
         {
-            switch(e.Item.Tag.ToString ())
+            switch (e.Item.Tag.ToString())
             {
                 case "demoListViewRefresh":
-                    {
-                        this.Show(new demoListViewRefresh());
-                    }
+                    this.Show(new demoListViewRefresh());
                     break;
                 case "userFilter":
+                    //Dialog显示的自定义控件，如果重复使用，不需要每一次都实例化，如果需要实例化，记得把原来的给Destroy
+                    if (filter == null)
                     {
-                        //Dialog显示的自定义控件，如果重复使用，不需要每一次都实例化，如果需要实例化，记得把原来的给Destroy
-                        if (filter == null)
-                        {
-                            //由于内部使用了Flex布局，需要在外部给定高度
-                            filter= new userFilter();
-                            filter.Height = 400;
-                            filter.BackColor = System.Drawing.Color.White;
-                            //最后一个参数代表支持点击空白处关闭
-                            filterOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
-                        }
-                        this.ShowDialog(filter, filterOptions);
+                        //由于内部使用了Flex布局，需要在外部给定高度
+                        filter = new userFilter();
+                        filter.Height = 400;
+                        filter.BackColor = System.Drawing.Color.White;
+                        //最后一个参数代表支持点击空白处关闭
+                        filterOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
                     }
+                    this.ShowDialog(filter, filterOptions);
                     break;
                 case "userFooterDialog":
+                    //Dialog显示的自定义控件，如果重复使用，不需要每一次都实例化，如果需要实例化，记得把原来的给Destroy
+                    if (footerDialog == null)
                     {
-                        //Dialog显示的自定义控件，如果重复使用，不需要每一次都实例化，如果需要实例化，记得把原来的给Destroy
-                        if (footerDialog == null)
-                        {
-                            //由于内部控件都有了高度，所以userFooterDialog不用设置高度，会自动撑大
-                            footerDialog = new SmobilerSamples.ShowDialog.userFooterDialog();
-                            //最后一个参数代表支持点击空白处关闭
-                            footerDialogOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
-                        }
-                        this.ShowDialog(footerDialog, footerDialogOptions);
+                        //由于内部控件都有了高度，所以userFooterDialog不用设置高度，会自动撑大
+                        footerDialog = new SmobilerSamples.ShowDialog.userFooterDialog();
+                        //最后一个参数代表支持点击空白处关闭
+                        footerDialogOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
                     }
+                    this.ShowDialog(footerDialog, footerDialogOptions);
+                    break;
+                case "userDialogPassword":
+                    if (footerDialogOptions == null)
+                        footerDialogOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
+                    ShowDialog.userDialogPassword dialogPassowrd = new ShowDialog.userDialogPassword();
+                    dialogPassowrd.DialogPassword += (pass) => { MessageBox.Show(pass); };
+                    this.ShowDialog(dialogPassowrd, footerDialogOptions);
+                    break;
+                case "demogetdata":
+                    demogetdata dm = new demogetdata();
+                    dm.Selected += (obj, args) => { Toast(args.Text); };
+                    this.ShowDialog(dm);
+                    break;
+                case "demoWebView":
+                    this.Show(new demoWebView());
                     break;
             }
+
         }
     }
 }
