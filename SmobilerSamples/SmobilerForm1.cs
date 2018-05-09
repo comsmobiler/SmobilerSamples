@@ -9,6 +9,7 @@ namespace SmobilerSamples
 {
     partial class SmobilerForm1 : Smobiler.Core.Controls.MobileForm
     {
+
         private void SmobilerForm1_Load(object sender, EventArgs e)
         {
             ListMenuViewGroup grp1 = new ListMenuViewGroup();
@@ -18,6 +19,7 @@ namespace SmobilerSamples
             grp1.Items.Add(new ListMenuViewItem("logon", "弹出密码输入框", "", "") { Tag = "userDialogPassword" });
             grp1.Items.Add(new ListMenuViewItem("logon", "ShowDialig后获取数据", "", "") { Tag = "demogetdata" });
             grp1.Items.Add(new ListMenuViewItem("logon", "WebView加载各种资源", "", "") { Tag = "demoWebView" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "Image动态加载图像", "", "") { Tag = "demoCustomResource" });
             this.listMenuView1.Groups.Add(grp1);
         }
 
@@ -72,6 +74,9 @@ namespace SmobilerSamples
                     break;
                 case "demoWebView":
                     this.Show(new demoWebView());
+                    break;
+                case "demoCustomResource":
+                    this.Show(new demoCustomResource());
                     break;
             }
 

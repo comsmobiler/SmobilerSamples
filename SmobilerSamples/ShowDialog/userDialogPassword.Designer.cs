@@ -463,7 +463,6 @@ namespace SmobilerSamples.ShowDialog
             this.ibtnBack.BorderColor = System.Drawing.Color.LightBlue;
             this.ibtnBack.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
             this.ibtnBack.Name = "ibtnBack";
-            this.ibtnBack.Padding = new Smobiler.Core.Controls.Padding(10F, 10F, 10F, 5F);
             this.ibtnBack.ResourceID = "times-circle-o";
             this.ibtnBack.Size = new System.Drawing.Size(100, 0);
             this.ibtnBack.Press += new System.EventHandler(this.ibtnBack_Press);

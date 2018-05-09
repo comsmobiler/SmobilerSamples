@@ -62,7 +62,7 @@ namespace SmobilerSamples
             }
             else
             {
-                this.listView1.NewData(dt);
+                this.listView1.NewRow(dt, "");
             }
         }
 
