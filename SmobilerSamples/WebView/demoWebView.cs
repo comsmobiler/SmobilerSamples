@@ -15,7 +15,7 @@ namespace SmobilerSamples
         private void demoListViewRefresh_Load(object sender, EventArgs e)
         {
             //配合LocalHtml使用，生成文件
-            var localHtmlPath = Path.Combine(MobileResourceManager.DefaultWebStaticPath, "demo.html");
+            var localHtmlPath = Path.Combine(MobileResourceManager.DefaultWebPath, "demo.html");
             if (File.Exists(localHtmlPath)==false)
             {
               using( FileStream stream=  File.Create(localHtmlPath))
@@ -41,12 +41,12 @@ namespace SmobilerSamples
 
         private void btnLocalHtml_Press(object sender, EventArgs e)
         {
-            this.webView1.Url = MobileResourceManager.GetResourceURL(this.Client.SessionID, "static?path=demo.html");
+            this.webView1.Url = MobileResourceManager.GetResourceURL(this.Client.SessionID, "web/demo.html");
         }
 
         private void btnDymaticHtml_Press(object sender, EventArgs e)
         {
-            this.webView1.Url = MobileResourceManager.GetResourceURL(this.Client.SessionID, "dynamic?path=demo.html");
+            this.webView1.Url = MobileResourceManager.GetResourceURL(this.Client.SessionID, "dynamic");
         }
 
         private void btnSmobilerUrl_Press(object sender, EventArgs e)

@@ -38,19 +38,9 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Smobiler.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c28d201d12639a97, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Code\Dll\Smobiler.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Smobiler.Core.Controls">
-      <HintPath>..\..\..\..\Code\Dll\Smobiler.Core.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Smobiler.Design">
-      <HintPath>..\..\..\..\Code\Dll\Smobiler.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Smobiler.Utility">
-      <HintPath>..\..\..\..\Code\Dll\Smobiler.Utility.dll</HintPath>
-    </Reference>
+    <Reference Include="Smobiler.Core" />
+    <Reference Include="Smobiler.Core.Controls" />
+    <Reference Include="Smobiler.Utility" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />

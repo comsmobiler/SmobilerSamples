@@ -45,6 +45,7 @@ namespace SmobilerSamples
             // 
             // webView1
             // 
+            this.webView1.Flex = 1;
             this.webView1.Name = "webView1";
             this.webView1.Size = new System.Drawing.Size(0, 300);
             // 
@@ -69,7 +70,7 @@ namespace SmobilerSamples
             this.btnSmobilerUrl.Text = "ÐÞ¸ÄÎªSmobiler¹ÙÍøÁ´½Ó";
             this.btnSmobilerUrl.Press += new System.EventHandler(this.btnSmobilerUrl_Press);
             // 
-            // demoWebViewLocal
+            // demoWebView
             // 
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.title1,
