@@ -12,6 +12,7 @@ namespace SmobilerSamples
 
         private void SmobilerForm1_Load(object sender, EventArgs e)
         {
+            //定义ListMenuViewGroup
             ListMenuViewGroup grp1 = new ListMenuViewGroup();
             grp1.Items.Add(new ListMenuViewItem("logon", "ListView服务端刷新", "", "") { Tag = "demoListViewRefresh" });
             grp1.Items.Add(new ListMenuViewItem("logon", "数据选择", "", "") { Tag = "userFilter" });
@@ -20,20 +21,31 @@ namespace SmobilerSamples
             grp1.Items.Add(new ListMenuViewItem("logon", "ShowDialig后获取数据", "", "") { Tag = "demogetdata" });
             grp1.Items.Add(new ListMenuViewItem("logon", "WebView加载各种资源", "", "") { Tag = "demoWebView" });
             grp1.Items.Add(new ListMenuViewItem("logon", "Image动态加载图像", "", "") { Tag = "demoCustomResource" });
+            //将ListMenuViewGroup添加到当前的ListMenuView中
             this.listMenuView1.Groups.Add(grp1);
         }
 
+        //用于显示一个过滤的用户控件，详见FilterView文件夹
         userFilter filter;
+        //用于Dialog弹出时的选项
         DialogOptions filterOptions;
 
+        //用于显示在底部弹出的用户控件，详见ShowDialog文件夹
         SmobilerSamples.ShowDialog.userFooterDialog footerDialog;
+        //用于Dialog弹出时的选项
         DialogOptions footerDialogOptions;
 
+        /// <summary>
+        /// 处理ListMenuView的元素点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listMenuView1_ItemPress(object sender, ListMenuViewItemPressEventArgs e)
         {
             switch (e.Item.Tag.ToString())
             {
                 case "demoListViewRefresh":
+                    //显示demoListViewRefresh窗体
                     this.Show(new demoListViewRefresh());
                     break;
                 case "userFilter":
@@ -44,9 +56,16 @@ namespace SmobilerSamples
                         filter = new userFilter();
                         filter.Height = 400;
                         filter.BackColor = System.Drawing.Color.White;
-                        //最后一个参数代表支持点击空白处关闭
-                        filterOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
+
+                        /* DialogOptions参数说明
+                         * justifyAlign: LayoutJustifyAlign.FlexEnd 布局显示在最下面
+                         * backColor: System.Drawing.Color.FromArgb(128, 128, 128, 128) 整个Dialog的背景色
+                         * padding: Padding.Empty 设置内边框为空，就是全屏显示
+                         * touchClosed: true 是否点击空白处关闭
+                         */
+                        filterOptions = new DialogOptions(justifyAlign: LayoutJustifyAlign.FlexEnd, backColor: System.Drawing.Color.FromArgb(128, 128, 128, 128), padding: Padding.Empty, touchClosed: true);
                     }
+                    //弹出filter
                     this.ShowDialog(filter, filterOptions);
                     break;
                 case "userFooterDialog":
@@ -55,27 +74,40 @@ namespace SmobilerSamples
                     {
                         //由于内部控件都有了高度，所以userFooterDialog不用设置高度，会自动撑大
                         footerDialog = new SmobilerSamples.ShowDialog.userFooterDialog();
-                        //最后一个参数代表支持点击空白处关闭
+
+                        //同case "userFilter":中的参数设定
                         footerDialogOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
                     }
+                    //弹出footerDialog
                     this.ShowDialog(footerDialog, footerDialogOptions);
                     break;
                 case "userDialogPassword":
                     if (footerDialogOptions == null)
+                    {
+                        //同case "userFilter":中的参数设定
                         footerDialogOptions = new DialogOptions(LayoutJustifyAlign.FlexEnd, System.Drawing.Color.FromArgb(128, 128, 128, 128), Padding.Empty, true);
+                    }
+                    //创建userDialogPassword用户控件实例
                     ShowDialog.userDialogPassword dialogPassowrd = new ShowDialog.userDialogPassword();
+                    //绑定DialogPassword事件
                     dialogPassowrd.DialogPassword += (pass) => { MessageBox.Show(pass); };
+                    //弹出dialogPassowrd
                     this.ShowDialog(dialogPassowrd, footerDialogOptions);
                     break;
                 case "demogetdata":
+                    //创建demogetdata用户控件实例
                     demogetdata dm = new demogetdata();
+                    //绑定demogetdata的Selected事件
                     dm.Selected += (obj, args) => { Toast(args.Text); };
+                    //弹出Dialog
                     this.ShowDialog(dm);
                     break;
                 case "demoWebView":
+                    //显示demoWebView窗体
                     this.Show(new demoWebView());
                     break;
                 case "demoCustomResource":
+                    //显示demoCustomResource窗体
                     this.Show(new demoCustomResource());
                     break;
             }
