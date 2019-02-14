@@ -126,6 +126,12 @@
     <Compile Include="Resource\demoCustomResource.Designer.cs">
       <DependentUpon>demoCustomResource.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scroll\demoTwoWayScrolling.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scroll\demoTwoWayScrolling.Designer.cs">
+      <DependentUpon>demoTwoWayScrolling.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowDialog\userDialogPassword.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\demoCustomResource.resx">
       <DependentUpon>demoCustomResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scroll\demoTwoWayScrolling.resx">
+      <DependentUpon>demoTwoWayScrolling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowDialog\userDialogPassword.resx">
       <DependentUpon>userDialogPassword.cs</DependentUpon>

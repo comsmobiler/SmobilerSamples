@@ -25,6 +25,7 @@ namespace SmobilerSamples
 
             grp1.Items.Add(new ListMenuViewItem("logon", "绝对布局", "", "") { Tag = "demoLoginAbsoluteLayout" });
             grp1.Items.Add(new ListMenuViewItem("logon", "相对布局", "", "") { Tag = "demoLoginRelativeLayout" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "双向滚动", "", "") { Tag = "demoTwoWayScrolling" });
             //将ListMenuViewGroup添加到当前的ListMenuView中
             this.listMenuView1.Groups.Add(grp1);
         }
@@ -121,7 +122,11 @@ namespace SmobilerSamples
                 case "demoLoginAbsoluteLayout":
                     //显示demoLoginAbsoluteLayout窗体
                     this.Show(new demoLoginAbsoluteLayout());
-                    break;
+                    break; 
+                        case "demoTwoWayScrolling":
+                    //显示demoTwoWayScrolling窗体
+                    this.Show(new demoTwoWayScrolling());
+                    break; 
             }
 
         }
