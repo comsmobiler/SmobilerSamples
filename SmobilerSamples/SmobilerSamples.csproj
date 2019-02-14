@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="Smobiler.Core" />
     <Reference Include="Smobiler.Core.Controls" />
+    <Reference Include="Smobiler.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9301bc54ca0d7a69, processorArchitecture=MSIL" />
     <Reference Include="Smobiler.Utility" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -98,6 +99,18 @@
     </Compile>
     <Compile Include="GetData\demogetdataTemplate.Designer.cs">
       <DependentUpon>demogetdataTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\demoLoginAbsoluteLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\demoLoginAbsoluteLayout.Designer.cs">
+      <DependentUpon>demoLoginAbsoluteLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\demoLoginRelativeLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\demoLoginRelativeLayout.Designer.cs">
+      <DependentUpon>demoLoginRelativeLayout.cs</DependentUpon>
     </Compile>
     <Compile Include="ListView\demoListViewRefresh.cs">
       <SubType>Component</SubType>
@@ -163,6 +176,12 @@
     <EmbeddedResource Include="GetData\demogetdataTemplate.resx">
       <DependentUpon>demogetdataTemplate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\demoLoginAbsoluteLayout.resx">
+      <DependentUpon>demoLoginAbsoluteLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\demoLoginRelativeLayout.resx">
+      <DependentUpon>demoLoginRelativeLayout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListView\demoListViewRefresh.resx">
       <DependentUpon>demoListViewRefresh.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +204,7 @@
   <ItemGroup>
     <Content Include="Smobiler_128.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

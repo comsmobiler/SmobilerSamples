@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Smobiler.Core;
 using Smobiler.Core.Controls;
+using SmobilerSamples.Layout;
 
 namespace SmobilerSamples
 {
@@ -18,9 +19,12 @@ namespace SmobilerSamples
             grp1.Items.Add(new ListMenuViewItem("logon", "数据选择", "", "") { Tag = "userFilter" });
             grp1.Items.Add(new ListMenuViewItem("logon", "底部弹出输入Dialog", "", "") { Tag = "userFooterDialog" });
             grp1.Items.Add(new ListMenuViewItem("logon", "弹出密码输入框", "", "") { Tag = "userDialogPassword" });
-            grp1.Items.Add(new ListMenuViewItem("logon", "ShowDialig后获取数据", "", "") { Tag = "demogetdata" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "ShowDialog后获取数据", "", "") { Tag = "demogetdata" });
             grp1.Items.Add(new ListMenuViewItem("logon", "WebView加载各种资源", "", "") { Tag = "demoWebView" });
             grp1.Items.Add(new ListMenuViewItem("logon", "Image动态加载图像", "", "") { Tag = "demoCustomResource" });
+
+            grp1.Items.Add(new ListMenuViewItem("logon", "绝对布局", "", "") { Tag = "demoLoginAbsoluteLayout" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "相对布局", "", "") { Tag = "demoLoginRelativeLayout" });
             //将ListMenuViewGroup添加到当前的ListMenuView中
             this.listMenuView1.Groups.Add(grp1);
         }
@@ -109,6 +113,14 @@ namespace SmobilerSamples
                 case "demoCustomResource":
                     //显示demoCustomResource窗体
                     this.Show(new demoCustomResource());
+                    break;
+                case "demoLoginRelativeLayout":
+                    //显示demoLoginRelativeLayout窗体
+                    this.Show(new demoLoginRelativeLayout());
+                    break;
+                case "demoLoginAbsoluteLayout":
+                    //显示demoLoginAbsoluteLayout窗体
+                    this.Show(new demoLoginAbsoluteLayout());
                     break;
             }
 
