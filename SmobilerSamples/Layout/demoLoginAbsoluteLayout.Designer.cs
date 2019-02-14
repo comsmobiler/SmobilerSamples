@@ -45,6 +45,7 @@ namespace SmobilerSamples.Layout
             this.line2,
             this.chkRememberPwd,
             this.label4});
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Scrollable = true;
