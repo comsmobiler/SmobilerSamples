@@ -144,6 +144,12 @@
     <Compile Include="SmobilerForm1.Designer.cs">
       <DependentUpon>SmobilerForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transparent\demoTransparent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Transparent\demoTransparent.designer.cs">
+      <DependentUpon>demoTransparent.cs</DependentUpon>
+    </Compile>
     <Compile Include="WebView\demoWebView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SmobilerForm1.resx">
       <DependentUpon>SmobilerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transparent\demoTransparent.resx">
+      <DependentUpon>demoTransparent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WebView\demoWebView.resx">
       <DependentUpon>demoWebView.cs</DependentUpon>
