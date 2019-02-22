@@ -112,6 +112,42 @@
     <Compile Include="Layout\demoLoginRelativeLayout.Designer.cs">
       <DependentUpon>demoLoginRelativeLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\demoTabToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\demoTabToolbar.Designer.cs">
+      <DependentUpon>demoTabToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmAnalyze.Designer.cs">
+      <DependentUpon>frmAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmMasterData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmMasterData.Designer.cs">
+      <DependentUpon>frmMasterData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmUser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\UserControl\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListView\demoListViewRefresh.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -194,6 +230,24 @@
     <EmbeddedResource Include="Layout\demoLoginRelativeLayout.resx">
       <DependentUpon>demoLoginRelativeLayout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\demoTabToolbar.resx">
+      <DependentUpon>demoTabToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\UserControl\frmAnalyze.resx">
+      <DependentUpon>frmAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\UserControl\frmMasterData.resx">
+      <DependentUpon>frmMasterData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\UserControl\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\UserControl\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\UserControl\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListView\demoListViewRefresh.resx">
       <DependentUpon>demoListViewRefresh.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,9 +274,43 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Resources\Image\assetsType.png" />
+    <Content Include="bin\Debug\Resources\Image\caigou.png" />
+    <Content Include="bin\Debug\Resources\Image\CangKu.png" />
+    <Content Include="bin\Debug\Resources\Image\cangku_sel.png" />
+    <Content Include="bin\Debug\Resources\Image\ChuKu.png" />
+    <Content Include="bin\Debug\Resources\Image\DiaoBo.png" />
+    <Content Include="bin\Debug\Resources\Image\dingdan.png" />
+    <Content Include="bin\Debug\Resources\Image\dingdan_sel.png" />
+    <Content Include="bin\Debug\Resources\Image\gongyingshang.png" />
+    <Content Include="bin\Debug\Resources\Image\guest.png" />
+    <Content Include="bin\Debug\Resources\Image\haocai.png" />
+    <Content Include="bin\Debug\Resources\Image\kehu.png" />
+    <Content Include="bin\Debug\Resources\Image\kucun.png" />
+    <Content Include="bin\Debug\Resources\Image\logon.png" />
+    <Content Include="bin\Debug\Resources\Image\muban.png" />
+    <Content Include="bin\Debug\Resources\Image\pandian.png" />
+    <Content Include="bin\Debug\Resources\Image\RuKu.png" />
+    <Content Include="bin\Debug\Resources\Image\shezhi.png" />
+    <Content Include="bin\Debug\Resources\Image\shezhi_sel.png" />
+    <Content Include="bin\Debug\Resources\Image\shuju.png" />
+    <Content Include="bin\Debug\Resources\Image\shuju_sel.png" />
+    <Content Include="bin\Debug\Resources\Image\supplier.png" />
+    <Content Include="bin\Debug\Resources\Image\tongji.png" />
+    <Content Include="bin\Debug\Resources\Image\tongji_sel.png" />
+    <Content Include="bin\Debug\Resources\Image\warehouse.png" />
+    <Content Include="bin\Debug\Resources\Image\xiaoshou.png" />
+    <Content Include="bin\Debug\Resources\Image\youxiaoqi.png" />
+    <Content Include="bin\Debug\Resources\Image\ZiChan.png" />
+    <Content Include="bin\Debug\Resources\Web\demo.html" />
     <Content Include="Smobiler_128.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\Resources\Audio\" />
+    <Folder Include="bin\Debug\Resources\Document\" />
+    <Folder Include="bin\Debug\Resources\Media\" />
+    <Folder Include="bin\Debug\Resources\Upload\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

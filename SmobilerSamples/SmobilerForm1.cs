@@ -30,6 +30,8 @@ namespace SmobilerSamples
             grp1.Items.Add(new ListMenuViewItem("logon", "透明度", "", "") { Tag = "demoTransparent" });
 
             grp1.Items.Add(new ListMenuViewItem("logon", "双向滚动", "", "") { Tag = "demoTwoWayScrolling" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "基于 TagPageView 的 Toolbar", "", "") { Tag = "demoTabToolbar" });
+
 
             //将ListMenuViewGroup添加到当前的ListMenuView中
             this.listMenuView1.Groups.Add(grp1);
@@ -138,6 +140,12 @@ namespace SmobilerSamples
                     //显示demoTwoWayScrolling窗体
                     this.Show(new demoTwoWayScrolling());
                     break;
+
+                case "demoTabToolbar":
+                    //显示demoTabToolbar窗体
+                    this.Show(new demoTabToolbar());
+                    break;
+
 
             }
 
