@@ -23,30 +23,33 @@ namespace SmobilerSamples.Layout
 
         private void toolBar_ToolbarItemClick(object sender, ToolbarClickEventArgs e)
         {
-            switch (e.Name)
+            if (toolBar.SelectedIndex!=tabPageView1.PageIndex)
             {
-                case "仓库":
-                    tabPageView1.PageIndex = 0;
-                    break;
-                case "订单":
-                    tabPageView1.PageIndex =1;
-                    break;
-                case "主数据":
-                    tabPageView1.PageIndex = 2;
-                    break;
-                case "统计":
-                    tabPageView1.PageIndex = 3;
-                    break;
-                case "设置":
-                    tabPageView1.PageIndex = 4;
-                    break;
-              
+                switch (e.Name)
+                {
+                    case "仓库":
+                        tabPageView1.PageIndex = 0;
+                        break;
+                    case "订单":
+                        tabPageView1.PageIndex = 1;
+                        break;
+                    case "主数据":
+                        tabPageView1.PageIndex = 2;
+                        break;
+                    case "统计":
+                        tabPageView1.PageIndex = 3;
+                        break;
+                    case "设置":
+                        tabPageView1.PageIndex = 4;
+                        break;
+
+                }
             }
         }
 
         private void demoTabToolbar_Load(object sender, EventArgs e)
         {
-          
+
             tabPageView1.Controls.Add(new frmMenu() { Dock = System.Windows.Forms.DockStyle.Fill });
             tabPageView1.Controls.Add(new frmOrder() { Dock = System.Windows.Forms.DockStyle.Fill });
             tabPageView1.Controls.Add(new frmMasterData() { Dock = System.Windows.Forms.DockStyle.Fill });
@@ -57,7 +60,7 @@ namespace SmobilerSamples.Layout
 
         private void tabPageView1_PageIndexChanged(object sender, EventArgs e)
         {
-            toolBar.SelectedIndex = tabPageView1.PageIndex;
+                toolBar.SelectedIndex = tabPageView1.PageIndex;
         }
     }
 }
