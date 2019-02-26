@@ -42,7 +42,6 @@ namespace SmobilerSamples.Layout.UserControl
             this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
             this.title1.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
             this.title1.Name = "title1";
-            this.title1.ResourceID = "arrow-left";
             this.title1.Size = new System.Drawing.Size(300, 30);
             this.title1.Text = "主数据";
             this.title1.ImagePress += new System.EventHandler(this.title1_ImagePress);

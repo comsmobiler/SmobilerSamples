@@ -23,6 +23,7 @@ namespace SmobilerSamples.Layout.UserControl
             this.plImage = new Smobiler.Core.Controls.Panel();
             this.lblName = new Smobiler.Core.Controls.Label();
             this.imgEdit = new Smobiler.Core.Controls.ImageButton();
+            this.image1 = new Smobiler.Core.Controls.Image();
             this.plSex = new Smobiler.Core.Controls.Panel();
             this.label1 = new Smobiler.Core.Controls.Label();
             this.btnSex = new Smobiler.Core.Controls.Button();
@@ -42,14 +43,12 @@ namespace SmobilerSamples.Layout.UserControl
             this.plEmail = new Smobiler.Core.Controls.Panel();
             this.label3 = new Smobiler.Core.Controls.Label();
             this.lblEmail = new Smobiler.Core.Controls.Label();
-            this.image1 = new Smobiler.Core.Controls.Image();
             // 
             // title1
             // 
             this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
             this.title1.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
             this.title1.Name = "title1";
-            this.title1.ResourceID = "arrow-left";
             this.title1.Size = new System.Drawing.Size(0, 30);
             this.title1.Text = "设置";
             this.title1.ImagePress += new System.EventHandler(this.title1_ImagePress);
@@ -99,6 +98,14 @@ namespace SmobilerSamples.Layout.UserControl
             this.imgEdit.Size = new System.Drawing.Size(25, 25);
             this.imgEdit.SizeMode = Smobiler.Core.Controls.ImageSizeMode.Stretch;
             this.imgEdit.Press += new System.EventHandler(this.Img_Press);
+            // 
+            // image1
+            // 
+            this.image1.BorderRadius = 44;
+            this.image1.Location = new System.Drawing.Point(106, 21);
+            this.image1.Name = "image1";
+            this.image1.ResourceID = "logon";
+            this.image1.Size = new System.Drawing.Size(80, 79);
             // 
             // plSex
             // 
@@ -286,14 +293,6 @@ namespace SmobilerSamples.Layout.UserControl
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 10F, 0F);
             this.lblEmail.Size = new System.Drawing.Size(220, 40);
-            // 
-            // image1
-            // 
-            this.image1.BorderRadius = 44;
-            this.image1.Location = new System.Drawing.Point(106, 21);
-            this.image1.Name = "image1";
-            this.image1.ResourceID = "logon";
-            this.image1.Size = new System.Drawing.Size(80, 79);
             // 
             // frmUser
             // 

@@ -6,6 +6,7 @@ using Smobiler.Core;
 using Smobiler.Core.Controls;
 using SmobilerSamples.Layout;
 using SmobilerSamples.Transparent;
+using SmobilerSamples.WebView;
 
 namespace SmobilerSamples
 {
@@ -31,6 +32,7 @@ namespace SmobilerSamples
 
             grp1.Items.Add(new ListMenuViewItem("logon", "双向滚动", "", "") { Tag = "demoTwoWayScrolling" });
             grp1.Items.Add(new ListMenuViewItem("logon", "基于 TagPageView 的 Toolbar", "", "") { Tag = "demoTabToolbar" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "WebView控件和网页调用的示例", "", "") { Tag = "demoHtmlInteraction" });
 
 
             //将ListMenuViewGroup添加到当前的ListMenuView中
@@ -146,7 +148,10 @@ namespace SmobilerSamples
                     this.Show(new demoTabToolbar());
                     break;
 
-
+                case "demoHtmlInteraction":
+                    //显示demoTabToolbar窗体
+                    this.Show(new demoHtmlInteraction());
+                    break;
             }
 
         }

@@ -62,5 +62,16 @@ namespace SmobilerSamples.Layout
         {
                 toolBar.SelectedIndex = tabPageView1.PageIndex;
         }
+
+        private void demoTabToolbar_ActionButtonPress(object sender, ActionButtonPressEventArgs e)
+        {
+            switch (e.Index)
+            {
+                case 0:
+                    this.Form.Close();
+                    break;
+              
+            }
+        }
     }
 }

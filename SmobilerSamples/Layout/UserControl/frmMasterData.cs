@@ -19,7 +19,7 @@ namespace SmobilerSamples.Layout.UserControl
 
         private void title1_ImagePress(object sender, EventArgs e)
         {
-            this.Form.Close(); 
+            //this.Form.Close(); 
         }
 
         private void ImgUser_Press(object sender, EventArgs e)

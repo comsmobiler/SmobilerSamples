@@ -18,19 +18,19 @@ namespace SmobilerSamples.Layout.UserControl
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.IconMenuViewGroup iconMenuViewGroup9 = new Smobiler.Core.Controls.IconMenuViewGroup();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem45 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem46 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem47 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem48 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem49 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem50 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewGroup iconMenuViewGroup10 = new Smobiler.Core.Controls.IconMenuViewGroup();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem51 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem52 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem53 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem54 = new Smobiler.Core.Controls.IconMenuViewItem();
-            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem55 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewGroup iconMenuViewGroup1 = new Smobiler.Core.Controls.IconMenuViewGroup();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem1 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem2 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem3 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem4 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem5 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem6 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewGroup iconMenuViewGroup2 = new Smobiler.Core.Controls.IconMenuViewGroup();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem7 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem8 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem9 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem10 = new Smobiler.Core.Controls.IconMenuViewItem();
+            Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem11 = new Smobiler.Core.Controls.IconMenuViewItem();
             this.title1 = new Smobiler.Core.Controls.Title();
             this.panel1 = new Smobiler.Core.Controls.Panel();
             this.plWareHouse = new Smobiler.Core.Controls.Panel();
@@ -42,7 +42,6 @@ namespace SmobilerSamples.Layout.UserControl
             this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
             this.title1.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
             this.title1.Name = "title1";
-            this.title1.ResourceID = "arrow-left";
             this.title1.Size = new System.Drawing.Size(300, 30);
             this.title1.Text = "仓库";
             this.title1.ImagePress += new System.EventHandler(this.title1_ImagePress);
@@ -83,76 +82,76 @@ namespace SmobilerSamples.Layout.UserControl
             // iconMenu
             // 
             this.iconMenu.GridLines = true;
-            iconMenuViewGroup9.FontSize = 0F;
-            iconMenuViewGroup9.IconBorderRadius = 0;
-            iconMenuViewGroup9.ItemHeight = 0;
-            iconMenuViewItem45.Icon = "zichan";
-            iconMenuViewItem45.ID = "0";
-            iconMenuViewItem45.Text = "资产管理";
-            iconMenuViewItem45.Value = "Assets";
-            iconMenuViewItem46.Icon = "muban";
-            iconMenuViewItem46.ID = "1";
-            iconMenuViewItem46.Text = "资产模板";
-            iconMenuViewItem46.Value = "AssTemplate";
-            iconMenuViewItem47.Icon = "ruku";
-            iconMenuViewItem47.ID = "2";
-            iconMenuViewItem47.Text = "入库";
-            iconMenuViewItem47.Value = "AssIn";
-            iconMenuViewItem48.Icon = "chuku";
-            iconMenuViewItem48.ID = "3";
-            iconMenuViewItem48.Text = "出库";
-            iconMenuViewItem48.Value = "AssOut";
-            iconMenuViewItem49.Icon = "diaobo";
-            iconMenuViewItem49.ID = "5";
-            iconMenuViewItem49.Text = "调拨";
-            iconMenuViewItem49.Value = "AssTransfer";
-            iconMenuViewItem50.Icon = "pandian";
-            iconMenuViewItem50.ID = "4";
-            iconMenuViewItem50.Text = "盘点";
-            iconMenuViewItem50.Value = "AssInventory";
-            iconMenuViewGroup9.Items.AddRange(new Smobiler.Core.Controls.IconMenuViewItem[] {
-            iconMenuViewItem45,
-            iconMenuViewItem46,
-            iconMenuViewItem47,
-            iconMenuViewItem48,
-            iconMenuViewItem49,
-            iconMenuViewItem50});
-            iconMenuViewGroup9.ShowTitle = true;
-            iconMenuViewGroup9.Text = "资产";
-            iconMenuViewGroup10.FontSize = 0F;
-            iconMenuViewGroup10.IconBorderRadius = 0;
-            iconMenuViewGroup10.ItemHeight = 0;
-            iconMenuViewItem51.Icon = "haocai";
-            iconMenuViewItem51.ID = "0";
-            iconMenuViewItem51.Text = "耗材管理";
-            iconMenuViewItem51.Value = "ConManage";
-            iconMenuViewItem52.Icon = "ruku";
-            iconMenuViewItem52.ID = "1";
-            iconMenuViewItem52.Text = "入库";
-            iconMenuViewItem52.Value = "ConIn";
-            iconMenuViewItem53.Icon = "chuku";
-            iconMenuViewItem53.ID = "2";
-            iconMenuViewItem53.Text = "出库";
-            iconMenuViewItem53.Value = "ConOut";
-            iconMenuViewItem54.Icon = "diaobo";
-            iconMenuViewItem54.ID = "2";
-            iconMenuViewItem54.Text = "调拨";
-            iconMenuViewItem54.Value = "ConTransfer";
-            iconMenuViewItem55.Icon = "pandian";
-            iconMenuViewItem55.ID = "3";
-            iconMenuViewItem55.Text = "盘点";
-            iconMenuViewItem55.Value = "ConInventory";
-            iconMenuViewGroup10.Items.AddRange(new Smobiler.Core.Controls.IconMenuViewItem[] {
-            iconMenuViewItem51,
-            iconMenuViewItem52,
-            iconMenuViewItem53,
-            iconMenuViewItem54,
-            iconMenuViewItem55});
-            iconMenuViewGroup10.ShowTitle = true;
-            iconMenuViewGroup10.Text = "耗材";
+            iconMenuViewGroup1.FontSize = 0F;
+            iconMenuViewGroup1.IconBorderRadius = 0;
+            iconMenuViewGroup1.ItemHeight = 0;
+            iconMenuViewItem1.Icon = "zichan";
+            iconMenuViewItem1.ID = "0";
+            iconMenuViewItem1.Text = "资产管理";
+            iconMenuViewItem1.Value = "Assets";
+            iconMenuViewItem2.Icon = "muban";
+            iconMenuViewItem2.ID = "1";
+            iconMenuViewItem2.Text = "资产模板";
+            iconMenuViewItem2.Value = "AssTemplate";
+            iconMenuViewItem3.Icon = "ruku";
+            iconMenuViewItem3.ID = "2";
+            iconMenuViewItem3.Text = "入库";
+            iconMenuViewItem3.Value = "AssIn";
+            iconMenuViewItem4.Icon = "chuku";
+            iconMenuViewItem4.ID = "3";
+            iconMenuViewItem4.Text = "出库";
+            iconMenuViewItem4.Value = "AssOut";
+            iconMenuViewItem5.Icon = "diaobo";
+            iconMenuViewItem5.ID = "5";
+            iconMenuViewItem5.Text = "调拨";
+            iconMenuViewItem5.Value = "AssTransfer";
+            iconMenuViewItem6.Icon = "pandian";
+            iconMenuViewItem6.ID = "4";
+            iconMenuViewItem6.Text = "盘点";
+            iconMenuViewItem6.Value = "AssInventory";
+            iconMenuViewGroup1.Items.AddRange(new Smobiler.Core.Controls.IconMenuViewItem[] {
+            iconMenuViewItem1,
+            iconMenuViewItem2,
+            iconMenuViewItem3,
+            iconMenuViewItem4,
+            iconMenuViewItem5,
+            iconMenuViewItem6});
+            iconMenuViewGroup1.ShowTitle = true;
+            iconMenuViewGroup1.Text = "资产";
+            iconMenuViewGroup2.FontSize = 0F;
+            iconMenuViewGroup2.IconBorderRadius = 0;
+            iconMenuViewGroup2.ItemHeight = 0;
+            iconMenuViewItem7.Icon = "haocai";
+            iconMenuViewItem7.ID = "0";
+            iconMenuViewItem7.Text = "耗材管理";
+            iconMenuViewItem7.Value = "ConManage";
+            iconMenuViewItem8.Icon = "ruku";
+            iconMenuViewItem8.ID = "1";
+            iconMenuViewItem8.Text = "入库";
+            iconMenuViewItem8.Value = "ConIn";
+            iconMenuViewItem9.Icon = "chuku";
+            iconMenuViewItem9.ID = "2";
+            iconMenuViewItem9.Text = "出库";
+            iconMenuViewItem9.Value = "ConOut";
+            iconMenuViewItem10.Icon = "diaobo";
+            iconMenuViewItem10.ID = "2";
+            iconMenuViewItem10.Text = "调拨";
+            iconMenuViewItem10.Value = "ConTransfer";
+            iconMenuViewItem11.Icon = "pandian";
+            iconMenuViewItem11.ID = "3";
+            iconMenuViewItem11.Text = "盘点";
+            iconMenuViewItem11.Value = "ConInventory";
+            iconMenuViewGroup2.Items.AddRange(new Smobiler.Core.Controls.IconMenuViewItem[] {
+            iconMenuViewItem7,
+            iconMenuViewItem8,
+            iconMenuViewItem9,
+            iconMenuViewItem10,
+            iconMenuViewItem11});
+            iconMenuViewGroup2.ShowTitle = true;
+            iconMenuViewGroup2.Text = "耗材";
             this.iconMenu.Groups.AddRange(new Smobiler.Core.Controls.IconMenuViewGroup[] {
-            iconMenuViewGroup9,
-            iconMenuViewGroup10});
+            iconMenuViewGroup1,
+            iconMenuViewGroup2});
             this.iconMenu.Margin = new Smobiler.Core.Controls.Margin(0F, 10F, 0F, 0F);
             this.iconMenu.Name = "iconMenu";
             this.iconMenu.Size = new System.Drawing.Size(300, 425);

@@ -192,6 +192,12 @@
     <Compile Include="Transparent\demoTransparent.designer.cs">
       <DependentUpon>demoTransparent.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebView\demoHtmlInteraction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebView\demoHtmlInteraction.Designer.cs">
+      <DependentUpon>demoHtmlInteraction.cs</DependentUpon>
+    </Compile>
     <Compile Include="WebView\demoWebView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     <EmbeddedResource Include="Transparent\demoTransparent.resx">
       <DependentUpon>demoTransparent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WebView\demoHtmlInteraction.resx">
+      <DependentUpon>demoHtmlInteraction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WebView\demoWebView.resx">
       <DependentUpon>demoWebView.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +312,9 @@
     <Content Include="bin\Debug\Resources\Image\youxiaoqi.png" />
     <Content Include="bin\Debug\Resources\Image\ZiChan.png" />
     <Content Include="bin\Debug\Resources\Web\demo.html" />
+    <Content Include="Resources\Web\jsCookie.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Smobiler_128.ico" />
   </ItemGroup>
   <ItemGroup>

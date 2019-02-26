@@ -20,18 +20,17 @@ namespace SmobilerSamples.Layout.UserControl
         {
             this.title1 = new Smobiler.Core.Controls.Title();
             this.panel1 = new Smobiler.Core.Controls.Panel();
+            this.scType = new Smobiler.Core.Controls.SegmentedControl();
             this.plAllData = new Smobiler.Core.Controls.Panel();
             this.plSNType = new Smobiler.Core.Controls.Panel();
-            this.btnCon = new Smobiler.Core.Controls.Button();
             this.btnAss = new Smobiler.Core.Controls.Button();
-            this.scType = new Smobiler.Core.Controls.SegmentedControl();
+            this.btnCon = new Smobiler.Core.Controls.Button();
             // 
             // title1
             // 
             this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
             this.title1.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
             this.title1.Name = "title1";
-            this.title1.ResourceID = "arrow-left";
             this.title1.Size = new System.Drawing.Size(300, 30);
             this.title1.Text = "订单";
             this.title1.ImagePress += new System.EventHandler(this.title1_ImagePress);
@@ -45,6 +44,20 @@ namespace SmobilerSamples.Layout.UserControl
             this.panel1.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 0);
+            // 
+            // scType
+            // 
+            this.scType.Items = new string[] {
+        "采购订单",
+        "销售订单"};
+            this.scType.Name = "scType";
+            this.scType.SegmentedBorderRadius = 0;
+            this.scType.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
+            this.scType.SelectedColor = System.Drawing.Color.White;
+            this.scType.Size = new System.Drawing.Size(0, 35);
+            this.scType.UnSelectedBackColor = System.Drawing.Color.White;
+            this.scType.UnSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
+            this.scType.SelectedIndexChanged += new System.EventHandler(this.scType_SelectedIndexChanged);
             // 
             // plAllData
             // 
@@ -66,17 +79,6 @@ namespace SmobilerSamples.Layout.UserControl
             this.plSNType.Name = "plSNType";
             this.plSNType.Size = new System.Drawing.Size(40, 0);
             // 
-            // btnCon
-            // 
-            this.btnCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnCon.BorderRadius = 0;
-            this.btnCon.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnCon.Location = new System.Drawing.Point(0, 35);
-            this.btnCon.Name = "btnCon";
-            this.btnCon.Size = new System.Drawing.Size(40, 35);
-            this.btnCon.Text = "耗材";
-            this.btnCon.Press += new System.EventHandler(this.btnCon_Press);
-            // 
             // btnAss
             // 
             this.btnAss.BackColor = System.Drawing.Color.White;
@@ -87,19 +89,16 @@ namespace SmobilerSamples.Layout.UserControl
             this.btnAss.Text = "资产";
             this.btnAss.Press += new System.EventHandler(this.btnAss_Press);
             // 
-            // scType
+            // btnCon
             // 
-            this.scType.Items = new string[] {
-        "采购订单",
-        "销售订单"};
-            this.scType.Name = "scType";
-            this.scType.SegmentedBorderRadius = 0;
-            this.scType.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
-            this.scType.SelectedColor = System.Drawing.Color.White;
-            this.scType.Size = new System.Drawing.Size(0, 35);
-            this.scType.UnSelectedBackColor = System.Drawing.Color.White;
-            this.scType.UnSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
-            this.scType.SelectedIndexChanged += new System.EventHandler(this.scType_SelectedIndexChanged);
+            this.btnCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnCon.BorderRadius = 0;
+            this.btnCon.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCon.Location = new System.Drawing.Point(0, 35);
+            this.btnCon.Name = "btnCon";
+            this.btnCon.Size = new System.Drawing.Size(40, 35);
+            this.btnCon.Text = "耗材";
+            this.btnCon.Press += new System.EventHandler(this.btnCon_Press);
             // 
             // frmOrder
             // 
