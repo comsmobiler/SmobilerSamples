@@ -19,7 +19,7 @@ namespace SmobilerSamples
             //定义ListMenuViewGroup
             ListMenuViewGroup grp1 = new ListMenuViewGroup();
             grp1.Items.Add(new ListMenuViewItem("logon", "ListView服务端刷新", "", "") { Tag = "demoListViewRefresh" });
-            grp1.Items.Add(new ListMenuViewItem("logon", "ListView模板更新", "", "") { Tag = "demoListViewUpdate" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "ListView模板更新 - 编辑界面", "", "") { Tag = "demoListViewUpdate" });
             grp1.Items.Add(new ListMenuViewItem("logon", "数据选择", "", "") { Tag = "userFilter" });
             grp1.Items.Add(new ListMenuViewItem("logon", "底部弹出输入Dialog", "", "") { Tag = "userFooterDialog" });
             grp1.Items.Add(new ListMenuViewItem("logon", "弹出密码输入框", "", "") { Tag = "userDialogPassword" });
