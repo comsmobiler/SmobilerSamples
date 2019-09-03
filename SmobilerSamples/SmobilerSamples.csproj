@@ -154,6 +154,24 @@
     <Compile Include="ListView\demoListViewRefresh.Designer.cs">
       <DependentUpon>demoListViewRefresh.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListView\demoListViewTemplateUpdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListView\demoListViewTemplateUpdate.Designer.cs">
+      <DependentUpon>demoListViewTemplateUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListView\demoListViewTemplateUpdateControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListView\demoListViewTemplateUpdateControl.Designer.cs">
+      <DependentUpon>demoListViewTemplateUpdateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListView\demoListViewTemplateUpdateForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListView\demoListViewTemplateUpdateForm.Designer.cs">
+      <DependentUpon>demoListViewTemplateUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource\demoCustomResource.cs">
@@ -256,6 +274,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListView\demoListViewRefresh.resx">
       <DependentUpon>demoListViewRefresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListView\demoListViewTemplateUpdate.resx">
+      <DependentUpon>demoListViewTemplateUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListView\demoListViewTemplateUpdateControl.resx">
+      <DependentUpon>demoListViewTemplateUpdateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListView\demoListViewTemplateUpdateForm.resx">
+      <DependentUpon>demoListViewTemplateUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\demoCustomResource.resx">
       <DependentUpon>demoCustomResource.cs</DependentUpon>
