@@ -24,8 +24,8 @@ namespace SmobilerSamples.ListView
             {
                 if (lp.ShowResult == ShowResult.Yes)
                 {
-                    label1.Text = lp.textBox1.Text;
-                    label2.Text = lp.textBox2.Text;
+                    label1.Text = lp.text1;
+                    label2.Text = lp.text2;
                 }
             });
         }

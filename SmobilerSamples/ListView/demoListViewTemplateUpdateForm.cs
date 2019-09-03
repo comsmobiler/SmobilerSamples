@@ -14,24 +14,16 @@ namespace SmobilerSamples.ListView
             //This call is required by the SmobilerForm.
             InitializeComponent();
         }
-        private string text1;
-        private string text2;
+        public string text1 { get { return textBox1.Text; } }
+        public string text2 { get { return textBox2.Text; } }
         public demoListViewTemplateUpdateForm(string textbox1,string textbox2) : base()
         {
-            text1 = textbox1;
-            text2 = textbox2;
             //This call is required by the SmobilerForm.
             InitializeComponent();
+            textBox1.Text = textbox1;
+            textBox2.Text = textbox2;
         }
-        private void demoListViewTemplateUpdateForm_Load(object sender, EventArgs e)
-        {
-            this.ShowResult = ShowResult.No;
-            if (!string.IsNullOrEmpty(text1) & !string.IsNullOrEmpty(text2))
-            {
-                textBox1.Text = text1;
-                textBox2.Text = text2;
-            }
-        }
+  
         private void title1_ImagePress(object sender, EventArgs e)
         {
             this.Close();

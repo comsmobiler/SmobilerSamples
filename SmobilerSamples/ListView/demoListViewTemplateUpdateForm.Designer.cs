@@ -60,7 +60,6 @@ namespace SmobilerSamples.ListView
             this.textBox1,
             this.textBox2,
             this.button1});
-            this.Load += new System.EventHandler(this.demoListViewTemplateUpdateForm_Load);
             this.Name = "demoListViewTemplateUpdateForm";
 
         }
@@ -68,7 +67,7 @@ namespace SmobilerSamples.ListView
 
         private Smobiler.Core.Controls.Title title1;
         private Smobiler.Core.Controls.Button button1;
-        internal Smobiler.Core.Controls.TextBox textBox1;
-        internal Smobiler.Core.Controls.TextBox textBox2;
+        public Smobiler.Core.Controls.TextBox textBox1;
+        public Smobiler.Core.Controls.TextBox textBox2;
     }
 }
