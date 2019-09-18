@@ -18,21 +18,22 @@ namespace SmobilerSamples.WebView
         {
             //PostMessage用于向网页发送消息，类型为字符串，具体处理详见jsCookie.html中的说明。
             //这里使用json格式，为了便于示例，使用字符串拼接，实际中建议使用Json序列化方式操作。
-            this.webView1.PostMessage(@"ProcessSmoMessage({""action"":""setCookie"",""data"":{""name"":""smo"",""value"":""smopwd""}});");
+            this.webView1.PostMessage("{\"action\":\"setCookie\",\"data\":{\"name\":\"smo\",\"value\":\"smopwd\"}}");
+
         }
 
         private void btnGetCookie_Press(object sender, EventArgs e)
         {
             //PostMessage用于向网页发送消息，类型为字符串，具体处理详见jsCookie.html中的说明。
             //这里使用json格式，为了便于示例，使用字符串拼接，实际中建议使用Json序列化方式操作。
-            this.webView1.PostMessage("ProcessSmoMessage({\"action\":\"getCookie\",\"data\":{\"name\":\"smo\"}});");
+            this.webView1.PostMessage("{\"action\":\"getCookie\",\"data\":{\"name\":\"smo\"}}");
         }
 
         private void btnDelCookie_Press(object sender, EventArgs e)
         {
             //PostMessage用于向网页发送消息，类型为字符串，具体处理详见jsCookie.html中的说明。
             //这里使用json格式，为了便于示例，使用字符串拼接，实际中建议使用Json序列化方式操作。
-            this.webView1.PostMessage("ProcessSmoMessage({\"action\":\"delCookie\",\"data\":{\"name\":\"smo\"}});");
+            this.webView1.PostMessage("{\"action\":\"delCookie\",\"data\":{\"name\":\"smo\"}}");
         }
 
         //此方法用于处理OnMessage事件，此事件会在从网页上向控件发送消息时触发，详见jsCookie.html中的说明。
