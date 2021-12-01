@@ -25,7 +25,8 @@ namespace SmobilerSamples
             grp1.Items.Add(new ListMenuViewItem("logon", "弹出密码输入框", "", "") { Tag = "userDialogPassword" });
             grp1.Items.Add(new ListMenuViewItem("logon", "ShowDialog后获取数据", "", "") { Tag = "demogetdata" });
             grp1.Items.Add(new ListMenuViewItem("logon", "WebView加载各种资源", "", "") { Tag = "demoWebView" });
-            grp1.Items.Add(new ListMenuViewItem("logon", "Image动态加载图像", "", "") { Tag = "demoCustomResource" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "Image动态加载图像IExtendHandler", "", "") { Tag = "demoCustomResource" });
+            grp1.Items.Add(new ListMenuViewItem("logon", "Image动态加载图像IHttpHandler", "", "") { Tag = "demoCustomHttpResource" });
 
             grp1.Items.Add(new ListMenuViewItem("logon", "绝对布局", "", "") { Tag = "demoLoginAbsoluteLayout" });
             grp1.Items.Add(new ListMenuViewItem("logon", "相对布局", "", "") { Tag = "demoLoginRelativeLayout" });
@@ -125,6 +126,9 @@ namespace SmobilerSamples
                 case "demoCustomResource":
                     //显示demoCustomResource窗体
                     this.Show(new demoCustomResource());
+                    break;
+                case "demoCustomHttpResource":
+                    this.Show(new demoCustomHttpResource());
                     break;
                 case "demoLoginRelativeLayout":
                     //显示demoLoginRelativeLayout窗体
